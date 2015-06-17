@@ -20,6 +20,12 @@
 					$('#test').html(d);
 				},
 			});
+			$.ajax({
+				url:'https://api.github.com/repos/sayphp/sayphp.github.io/contents',
+				success:function(d){
+					console.log(d);
+				}
+			});
 		</script>
 	</body>
 </html>
