@@ -15,13 +15,13 @@
 		<script type="text/javascript">
 			var url = 'README.md';
 			$.ajax({
-				url:'README.md',
+				url:'https://api.github.com/repos/sayphp/sayphp.github.io/contents/blog/javascript/1.md?ref=master',
 				success:function(d){
 					$('#test').html(d);
 				},
 			});
 			$.ajax({
-				url:'https://api.github.com/repos/sayphp/sayphp.github.io/contents',
+				url:'https://api.github.com/repos/sayphp/sayphp.github.io/contents/blog/javascript/1.md',
 				success:function(d){
 					console.log(d);
 				}
