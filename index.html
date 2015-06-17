@@ -12,12 +12,15 @@
 			<div id="test"></div>
 		</main>
 		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+		<script type="text/javascript" src="base64.js"></script>
 		<script type="text/javascript">
 			var url = 'README.md';
 			$.ajax({
 				url:'https://api.github.com/repos/sayphp/sayphp.github.io/contents/blog/javascript/1.md?ref=master',
 				success:function(d){
-					$('#test').html(d);
+					var str = Base64.decode(d.content);
+					console.log(str.split("\n"));
+					$('#test').html(str);
 				},
 			});
 			$.ajax({
