@@ -56,9 +56,10 @@ main ul li,main ol li{
 }
 main pre{
     width:100%;
+    overflow-x:scroll;
 }
 main pre code{
-    width:100%;
+    line-height:1.4em;
 }
 footer{
     width:100%;
