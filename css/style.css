@@ -54,6 +54,9 @@ main ul,main ol{
 main ul li,main ol li{
     line-height:1.4em;
 }
+main pre{
+    width:100%;
+}
 footer{
     width:100%;
     position:fixed;
