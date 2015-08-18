@@ -27,12 +27,9 @@
         <script type="text/javascript" src="js/base64.js"></script>
         <script type="text/javascript" src="js/showdown.js"></script>
         <script type="text/javascript">
-            var url = 'README.md';
             var converter = new showdown.Converter();
-            
             $.ajax({
-                url:'https://api.github.com/repos/sayphp/sayphp.github.io/contents/data/demo/demo.md?ref=master',//获取文件
-//                url:'https://api.github.com/repos/sayphp/sayphp.github.io/git/tree/HEAD',
+                url:'https://api.github.com/repos/sayphp/book/contents/nginx/url_rewrite和301重定向.md',//获取文件
                 beforeSend:function(){
                     $('html').addClass('loading');
                 },
