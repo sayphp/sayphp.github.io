@@ -30,7 +30,7 @@
             var converter = new showdown.Converter();
             
             $.ajax({
-                url:'https://api.github.com/repos/sayphp/sayphp.github.io/contents/blog/javascript/1.md?ref=master',
+                url:'https://api.github.com/repos/sayphp/sayphp.github.io/contents/data/javascript/1.md?ref=master',
                 beforeSend:function(){
                     $('html').addClass('loading');
                 },
@@ -43,7 +43,7 @@
                 }
             });
 //            $.ajax({
-//                url:'https://api.github.com/repos/sayphp/sayphp.github.io/contents/blog/javascript/1.md',
+//                url:'https://api.github.com/repos/sayphp/sayphp.github.io/contents/data/javascript/1.md',
 //                success:function(d){
 //                    console.log(d);
 //                }
