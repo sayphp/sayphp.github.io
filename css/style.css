@@ -1,0 +1,69 @@
+/* basic */
+*{margin:0;padding:0px;}
+body{
+    font:1em "MircoSoft YaHei";
+    width:100%;
+}
+header{
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    text-indent: 0.7em;
+    font-size:1.4em;
+    line-height:2em;
+    height:2em;
+    box-shadow:1px 1px 1px rgba(12, 12, 12, 0.5);
+    background-color:#FFF;
+    font-family:Courier New;
+    font-style:italic;
+}
+header a{
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+}
+main{
+    height:100%;
+    margin:2em 0em;
+    padding:1em;
+}
+main h1{
+    font-size:2em;
+    line-height:2em;
+}
+main h2{
+    font-size:1.6em;
+    line-height:2em;
+}
+main h3{
+    font-size:1.4em;
+    line-height:2em;
+}
+main h4{
+    font-size:1.2em;
+    line-height:2em;
+}
+main p{
+    font-size:1em;
+    line-height:2em;
+}
+footer{
+    width:100%;
+    position:fixed;
+    bottom:0;
+    left:0;
+    box-shadow:-1px -1px 1px rgba(12, 12, 12, 0.5);
+    text-align:center;
+    line-height:1.6em;
+    height:1.6em;
+    font-size:1em;
+    font-family:Courier New;
+    background-color:#FFF;
+}
+
+.loading{
+    width:100%;
+    height:100%;
+    background:url(../images/load.gif) no-repeat center center;
+    background-size:5em;
+}

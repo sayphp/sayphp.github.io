@@ -1,34 +1,53 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<title> Say's HomePage </title>
-	</head>
-	<body>
-		<main style="width:600px;margin:0 auto;">
-			<h1> Github上的个人主页，尝试下Github Pages！ </h1>
-			<p style="text-align:right;">Say</p>
-			<p style="text-align:right;">2015-06-13</p>
-			<div id="test"></div>
-		</main>
-		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
-		<script type="text/javascript" src="base64.js"></script>
-		<script type="text/javascript">
-			var url = 'README.md';
-			$.ajax({
-				url:'https://api.github.com/repos/sayphp/sayphp.github.io/contents/blog/javascript/1.md?ref=master',
-				success:function(d){
-					var str = Base64.decode(d.content);
-					console.log(str.split("\n"));
-					$('#test').html(str);
-				},
-			});
-			$.ajax({
-				url:'https://api.github.com/repos/sayphp/sayphp.github.io/contents/blog/javascript/1.md',
-				success:function(d){
-					console.log(d);
-				}
-			});
-		</script>
-	</body>
+    <head>
+        <meta charset="utf-8" />
+        <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <title> Say's HomePage </title>
+        <meta name="author" content="Say@304438912" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+        <meta content="yes" name="apple-mobile-web-app-capable" />
+        <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+        <link type="text/css" rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <header>
+            <a href="index.html">Say's HomePage</a>
+        </header>
+        <main id="page">
+            <article id="article">
+                
+            </article>
+        </main>
+        <footer>
+            <p>Powered By Say</p>
+        </footer>
+        <script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+        <script type="text/javascript" src="js/base64.js"></script>
+        <script type="text/javascript" src="js/showdown.js"></script>
+        <script type="text/javascript">
+            var url = 'README.md';
+            var converter = new showdown.Converter();
+            
+            $.ajax({
+                url:'https://api.github.com/repos/sayphp/sayphp.github.io/contents/blog/javascript/1.md?ref=master',
+                beforeSend:function(){
+                    $('html').addClass('loading');
+                },
+                success:function(d){
+                    var str = Base64.decode(d.content);
+                    $('#article').html(converter.makeHtml(str));
+                },
+                complete:function(){
+                    $('html').removeClass('loading');
+                }
+            });
+//            $.ajax({
+//                url:'https://api.github.com/repos/sayphp/sayphp.github.io/contents/blog/javascript/1.md',
+//                success:function(d){
+//                    console.log(d);
+//                }
+//            });
+        </script>
+    </body>
 </html>
