@@ -57,6 +57,9 @@ main ul li,main ol li{
 main pre{
     width:100%;
 }
+main pre code{
+    width:100%;
+}
 footer{
     width:100%;
     position:fixed;
