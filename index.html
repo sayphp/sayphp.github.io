@@ -30,11 +30,13 @@
             var converter = new showdown.Converter();
             
             $.ajax({
-                url:'https://api.github.com/repos/sayphp/sayphp.github.io/contents/data/javascript/1.md?ref=master',
+                url:'https://api.github.com/repos/sayphp/sayphp.github.io/contents/data/demo/demo.md?ref=master',//获取文件
+//                url:'https://api.github.com/repos/sayphp/sayphp.github.io/git/tree/HEAD',
                 beforeSend:function(){
                     $('html').addClass('loading');
                 },
                 success:function(d){
+                    console.log(d);
                     var str = Base64.decode(d.content);
                     $('#article').html(converter.makeHtml(str));
                 },
