@@ -49,7 +49,7 @@ main p{
 }
 main ul,main ol{
     font-family:Helvetica Neue;
-    margin:2em;
+    padding-left:2em;
 }
 main ul li,main ol li{
     line-height:1.4em;
