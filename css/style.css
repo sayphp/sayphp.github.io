@@ -80,3 +80,37 @@ footer{
     background:url(../images/load.gif) no-repeat center center;
     background-size:5em;
 }
+.sayphp-tag{
+    padding-top:1em;
+    list-style:none;
+    font-size:1em;
+    line-height:2em;
+}
+.sayphp-tag a{
+    padding:0.2em;
+    margin:0.2em;
+    font-size:1.4em;
+    font-family:Courier New;
+    cursor: pointer;
+    line-height:2em;
+    color:rgb(255, 255, 255);
+    background-color:rgb(70, 130, 180);
+    border:0.1em solid rgb(70, 130, 180);
+    box-shadow:0.2em 0.2em 0.1em rgba(70, 130, 180, 0.5);
+}
+.sayphp-list{
+    margin-top:1em;
+    list-style:none;
+    font-size:1.4em;
+    padding-left:0em;
+}
+.sayphp-list li{
+    cursor:pointer;
+    border-bottom:1px solid rgba(12, 12, 12, 0.5);
+    line-height:2em;
+}
+.sayphp-list li:hover{
+    color:rgb(255, 255, 255);
+    background-color:rgb(70, 130, 180);
+    transition:color 0.5s ease-in, background-color 0.8s ease-in;
+}

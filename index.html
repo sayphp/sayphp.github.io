@@ -15,12 +15,15 @@
     </head>
     <body>
         <header>
-            <a href="index.html">Say's Blog</a>
+            <a class="index">Say's Blog</a>
         </header>
         <main>
             <article id="article">
                 
             </article>
+            <mark>
+                
+            </mark>
         </main>
         <footer>
             <p>Powered By Say</p>
@@ -30,25 +33,19 @@
         <script type="text/javascript" src="js/showdown.js"></script>
         <script type="text/javascript" src="js/sayphp.js"></script>
         <script type="text/javascript">
-            var converter = new showdown.Converter();
-            $.ajax({
-                url:'https://api.github.com/repos/sayphp/book/contents/nginx/url_rewrite和301重定向.md',//获取文件
-                beforeSend:function(){
-                    $('html').addClass('loading');
-                },
-                success:function(d){
-                    console.log(d);
-                    var str = Base64.decode(d.content);
-                    $('#article').html(converter.makeHtml(str));
-                },
-                complete:function(){
-                    $('html').removeClass('loading');
-                }
-            });
+//            var converter = new showdown.Converter();
 //            $.ajax({
-//                url:'https://api.github.com/repos/sayphp/sayphp.github.io/contents/data/javascript/1.md',
+//                url:'https://api.github.com/repos/sayphp/book/contents/nginx/url_rewrite和301重定向.md',//获取文件
+//                beforeSend:function(){
+//                    $('html').addClass('loading');
+//                },
 //                success:function(d){
 //                    console.log(d);
+//                    var str = Base64.decode(d.content);
+//                    $('#article').html(converter.makeHtml(str));
+//                },
+//                complete:function(){
+//                    $('html').removeClass('loading');
 //                }
 //            });
         </script>
