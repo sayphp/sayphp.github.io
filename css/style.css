@@ -74,7 +74,9 @@ footer{
     font-family:Courier New;
     background-color:#FFF;
 }
-
+.clear{
+    clear:both;
+}
 .loading{
     height:100%;
     background:url(../images/load.gif) no-repeat center center;
@@ -87,6 +89,7 @@ footer{
     line-height:2em;
 }
 .sayphp-tag a{
+    float:left;
     padding:0.2em;
     margin:0.2em;
     font-size:1.4em;

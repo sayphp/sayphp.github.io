@@ -68,14 +68,14 @@ var sayphp = function(){
                 $('html').addClass('loading');
             },
             success:function(d){
-                var content = '<div class="sayphp-tag">分类目录：';
+                var content = '<div class="sayphp-tag">';
                 for(var i in d){
                     if(d[i].type=='dir'){
                         content += '<a class="list" cat="' + d[i].path + '">' + d[i].name + '</a>';
                     }
 //                    console.log(d[i]);
                 }
-                content += '</ul>';
+                content += '<li class="clear"></li></ul>';
                 $('mark').html($this.md.makeHtml(content));
             },
             complete:function(){
