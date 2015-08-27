@@ -143,7 +143,7 @@ sayphp.prototype = {
     user: 'sayphp',
     repos: 'book',
     base64: Base64,
-    md: new showdown.Converter(),
+    md: new showdown.Converter({tables:'true',}),
     
 };
 var blog = new sayphp();
