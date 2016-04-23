@@ -46,6 +46,7 @@ var sayphp = function(){
                             console.log(d);
                             var content = '<ul class="sayphp-list">最新文章';
                             for(var z in d.files){
+                                if(d.files[z].filename.indexOf('hide')>0) continue;
                                 content += '<li class="page" title="' + d.files[z].filename + '">' + d.files[z].filename + '</li>';
                             }
                             content += '</ul>';
