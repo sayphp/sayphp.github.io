@@ -96,6 +96,7 @@ var sayphp = function(){
                 var content = '<ul class="sayphp-list">分类' + cat + '：';
                 console.log(d);
                 for(var i in d){
+                    if(d[i].name.indexOf('hide')>0) continue;
                     content += '<li class="page" title="' + d[i].path + '">' + d[i].name + '</li>';
                 }
                 $('#article').html(content);
