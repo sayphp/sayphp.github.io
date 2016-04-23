@@ -46,7 +46,7 @@ var sayphp = function(){
                             console.log(d);
                             var content = '<ul class="sayphp-list">最新文章';
                             for(var z in d.files){
-                                if(d.files[z].filename.indexOf('hide')>0) continue;
+                                if(d.files[z].filename.indexOf('hide')>-1) continue;
                                 content += '<li class="page" title="' + d.files[z].filename + '">' + d.files[z].filename + '</li>';
                             }
                             content += '</ul>';
@@ -96,7 +96,7 @@ var sayphp = function(){
                 var content = '<ul class="sayphp-list">分类' + cat + '：';
                 console.log(d);
                 for(var i in d){
-                    if(d[i].name.indexOf('hide')>0) continue;
+                    if(d[i].name.indexOf('hide')>-1) continue;
                     content += '<li class="page" title="' + d[i].path + '">' + d[i].name + '</li>';
                 }
                 $('#article').html(content);
